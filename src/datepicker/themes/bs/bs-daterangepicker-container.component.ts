@@ -36,6 +36,7 @@ export class BsDaterangepickerContainerComponent
   }
 
   ngOnInit(): void {
+    this.containerClass = this._config.containerClass;
     this._effects
       .init(this._store)
       // intial state options
