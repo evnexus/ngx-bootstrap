@@ -1,0 +1,43 @@
+<div class="">
+  <div class="">
+    <select
+      class="custom-select form-control "
+      [(ngModel)]="colorTheme" (ngModelChange)="applyTheme(dp);">
+      <option value="theme-default">default</option>
+      <option value="theme-green">green</option>
+      <option value="theme-blue">blue</option>
+      <option value="theme-dark-blue">dark-blue</option>
+      <option value="theme-red">red</option>
+      <option value="theme-orange">orange</option>
+    </select>
+  </div>
+  <input type="button"
+         class="btn btn-success"
+         value="Date Picker popup"
+         bsDatepicker
+         #dp="bsDatepicker"
+         [bsConfig]="bsConfig"/>
+</div>
+<br>
+
+<div class="">
+  <div class="">
+    <select
+      class="custom-select form-control "
+      [(ngModel)]="colorTheme" (ngModelChange)="applyTheme(dpr);">
+      <option value="theme-default">default</option>
+      <option value="theme-green">green</option>
+      <option value="theme-blue">blue</option>
+      <option value="theme-dark-blue">dark-blue</option>
+      <option value="theme-red">red</option>
+      <option value="theme-orange">orange</option>
+    </select>
+  </div>
+  <input type="button"
+         class="btn btn-success"
+         value="Date Picker popup"
+         bsDaterangepicker
+         #dpr="bsDaterangepicker"
+         [bsConfig]="bsConfig"/>
+</div>
+

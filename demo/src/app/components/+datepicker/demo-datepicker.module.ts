@@ -8,15 +8,13 @@ import { SharedModule } from '../../shared';
 import { DatepickerSectionComponent } from './datepicker-section.component';
 import { DEMO_COMPONENTS } from './demos';
 import { routes } from './demo-datepicker.routes';
-import { DemoDatePickerPopupComponent } from './demos/bs-popup/date-picker-popup';
 
 @NgModule({
-  declarations:[
-    DemoDatePickerPopupComponent,
+  declarations: [
     DatepickerSectionComponent,
     ...DEMO_COMPONENTS
   ],
-  imports:[
+  imports: [
     DatepickerModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CommonModule,
