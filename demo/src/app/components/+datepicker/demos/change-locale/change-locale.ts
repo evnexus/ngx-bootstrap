@@ -2,18 +2,18 @@ import { Component } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
 @Component({
-  selector: 'demo-datepicker-color-theming',
-  templateUrl: './color-theming.html'
+  selector: 'demo-datepicker-change-locale',
+  templateUrl: './change-locale.html'
 })
-export class DemoDatepickerColorThemingComponent {
-  colorTheme = 'theme-green';
+export class DemoDatepickerChangeLocaleComponent {
+  locale = 'en';
 
   bsConfig: Partial<BsDatepickerConfig>;
 
-  applyTheme(pop: any) {
+  applyLocale(pop: any) {
     // create new object on each property change
     // so Angular can catch object reference change
-    this.bsConfig = Object.assign({}, {containerClass: this.colorTheme});
+    this.bsConfig = Object.assign({}, {locale: this.locale});
     setTimeout(() => {
       pop.show();
     });

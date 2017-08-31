@@ -9,6 +9,12 @@ import { DatepickerSectionComponent } from './datepicker-section.component';
 import { DEMO_COMPONENTS } from './demos';
 import { routes } from './demo-datepicker.routes';
 
+import { defineLocale, getSetGlobalLocale } from 'ngx-bootstrap/bs-moment';
+import { ar } from 'ngx-bootstrap/locale';
+
+defineLocale(ar.abbr, ar);
+getSetGlobalLocale('en');
+
 @NgModule({
   declarations: [
     DatepickerSectionComponent,

@@ -51,6 +51,10 @@ let titleDoc = require('html-loader!markdown-loader!./docs/title.md');
       <ng-sample-box [ts]="demos.colorTheming.component" [html]="demos.colorTheming.html">
         <demo-datepicker-color-theming></demo-datepicker-color-theming>
       </ng-sample-box>
+      
+      <ng-sample-box [ts]="demos.changeLocale.component" [html]="demos.changeLocale.html">
+        <demo-datepicker-change-locale></demo-datepicker-change-locale>
+      </ng-sample-box>
 
       <ng-sample-box [ts]="demos.old.component" [html]="demos.old.html">
         <datepicker-demo></datepicker-demo>
