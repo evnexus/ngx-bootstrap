@@ -1,5 +1,5 @@
-<div class="">
-  <div class="">
+<div class="row">
+  <div class="col-xs-6 col-sm-3">
     <select
       class="custom-select form-control "
       [(ngModel)]="colorTheme" (ngModelChange)="applyTheme(dp);">
@@ -11,17 +11,19 @@
       <option value="theme-orange">orange</option>
     </select>
   </div>
-  <input type="button"
-         class="btn btn-success"
-         value="Date Picker popup"
-         bsDatepicker
-         #dp="bsDatepicker"
-         [bsConfig]="bsConfig"/>
+  <div class="col-xs-6 col-sm-9">
+    <input type="button"
+           class="btn btn-success"
+           value="Date Picker popup"
+           bsDatepicker
+           #dp="bsDatepicker"
+           [bsConfig]="bsConfig"/>
+  </div>
 </div>
 <br>
 
-<div class="">
-  <div class="">
+<div class="row">
+  <div class="col-xs-6 col-sm-3">
     <select
       class="custom-select form-control "
       [(ngModel)]="colorTheme" (ngModelChange)="applyTheme(dpr);">
@@ -33,11 +35,13 @@
       <option value="theme-orange">orange</option>
     </select>
   </div>
-  <input type="button"
-         class="btn btn-success"
-         value="Date Picker popup"
-         bsDaterangepicker
-         #dpr="bsDaterangepicker"
-         [bsConfig]="bsConfig"/>
+  <div class="col-xs-6 col-sm-9">
+    <input type="button"
+           class="btn btn-success"
+           value="Date Picker popup"
+           bsDaterangepicker
+           #dpr="bsDaterangepicker"
+           [bsConfig]="bsConfig"/>
+  </div>
 </div>
 
