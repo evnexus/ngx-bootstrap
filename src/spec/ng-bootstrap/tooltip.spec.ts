@@ -6,12 +6,12 @@
 import {
   TestBed, ComponentFixture, inject, fakeAsync, tick
 } from '@angular/core/testing';
-import {createGenericTestComponent} from './test/common';
+import { createGenericTestComponent } from './test/common';
 
-import {By} from '@angular/platform-browser';
-import {Component, ViewChild, ChangeDetectionStrategy} from '@angular/core';
+import { By } from '@angular/platform-browser';
+import { Component, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 
-import {TooltipModule, TooltipConfig, TooltipContainerComponent, TooltipDirective} from '../../tooltip';
+import { TooltipModule, TooltipConfig, TooltipContainerComponent, TooltipDirective } from '../../tooltip';
 
 const createTestComponent = (html: string) =>
   createGenericTestComponent(html, TestComponent) as ComponentFixture<TestComponent>;
@@ -21,9 +21,7 @@ const createOnPushTestComponent =
     ComponentFixture<TestOnPushComponent>;
 
 describe('tooltip-container', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({imports: [TooltipModule.forRoot()]});
-  });
+  beforeEach(() => { TestBed.configureTestingModule({imports: [TooltipModule.forRoot()]}); });
 
   it('should render tooltip on top by default', () => {
     const fixture = TestBed.createComponent(TooltipContainerComponent);
@@ -49,9 +47,7 @@ describe('tooltip', () => {
       {declarations: [TestComponent, TestOnPushComponent], imports: [TooltipModule.forRoot()]});
   });
 
-  function getWindow(element: any): HTMLElement {
-    return element.querySelector('bs-tooltip-container');
-  }
+  function getWindow(element: any): HTMLElement { return element.querySelector('bs-tooltip-container'); }
 
   describe('basic functionality', () => {
 
@@ -475,13 +471,8 @@ export class TestComponent {
 
   @ViewChild(TooltipDirective) public tooltip: TooltipDirective;
 
-  public shown(): void {
-    return;
-  }
-
-  public hidden(): void {
-    return;
-  }
+  public shown(): void {return;}
+  public hidden(): void {return;}
 }
 
 @Component({selector: 'test-onpush-cmpt', changeDetection: ChangeDetectionStrategy.OnPush, template: ``})

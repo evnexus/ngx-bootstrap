@@ -1,4 +1,3 @@
-/* tslint:disable */
 import { Component } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
